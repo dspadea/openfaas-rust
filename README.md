@@ -18,7 +18,8 @@ of thing, feel free to fork this repo. It's probably coming.
 
 * I think it'd be useful to corral HTTP headers and the like into an event context to pass into
 the function. That might be a breaking api change, though should require only a change to the
-handler function signature. 
+handler function signature.
+
 
 # Usage
 
