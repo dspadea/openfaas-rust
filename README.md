@@ -28,7 +28,7 @@ re-merge the projects, I'm happy to talk about that.
 This is not an "official" template, so you have to pull it by URL.
 
 ```shell
-faas-cli template pull https://github.com/dspadea/openfaas-rust-template
+faas-cli template pull https://github.com/dspadea/openfaas-rust
 ```
 
 If you already have a template called "rust", you can add `--overwrite`, but be warned that it will
@@ -36,7 +36,7 @@ clobber the rust template you currently have in your environment. (Truth in adve
 `--overwrite`.)
 
 ```shell
-faas-cli template pull --overwrite https://github.com/dspadea/openfaas-rust-template
+faas-cli template pull --overwrite https://github.com/dspadea/openfaas-rust
 ```
 
 The `template pull` command doesn't seem to support pulling with a new name, which is unfortunate. 
