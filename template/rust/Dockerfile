@@ -7,7 +7,7 @@ RUN rustup target add x86_64-unknown-linux-musl
 
 RUN apk add musl-dev
 
-RUN USER=root
+#RUN USER=root
 WORKDIR /usr/src/openfaas
 COPY function ./function
 COPY main ./main
