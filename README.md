@@ -7,9 +7,9 @@ Rust function template for OpenFaas, building on the work of Booyaa (see below),
 * JSON handling for arbitrary request/response objects
 * A few build process changes in the Docker file
 
-I think this is a good interim solution to easily get Rust functions with async and serde built in, 
-but I think this could be a lot better. There's a fair chance I'll wind up re-writing this (see roadmap), 
-so if this becomes important to you in any way, make sure you're forking it on Github or checking it into
+I think this template is a good interim solution to easily get Rust functions with async and serde built in, 
+but I think it could be a lot better. There's a fair chance I'll wind up re-writing it (see roadmap), 
+so if it becomes important to you in any way, make sure you're forking it on Github or checking it into
 your project repo. 
 
 
