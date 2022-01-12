@@ -6,6 +6,7 @@ Rust function template for OpenFaas, building on the work of Booyaa (see below),
 * Tokio for async handlers
 * JSON handling for arbitrary request/response objects
 * A few build process changes in the Docker file
+* Upgraded Rust compiler, Alpine, and Watchdog
 
 I think this template is a good interim solution to easily get Rust functions with async and serde built in, 
 but I think it could be a lot better. There's a fair chance I'll wind up re-writing it (see roadmap), 
