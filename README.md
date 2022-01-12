@@ -35,23 +35,11 @@ docker image size.
 
 # Usage
 
-This is not an "official" template, so you have to pull it by URL.
+This is not an "official" template in the template store, so you have to pull it by URL.
 
 ```shell
-faas-cli template pull https://github.com/dspadea/openfaas-rust
+faas-cli template pull https://github.com/dspadea/openfaas-rust-json-classic
 ```
-
-If you already have a template called "rust", you can add `--overwrite`, but be warned that it will
-clobber the rust template you currently have in your environment. (Truth in advertising, the flag is
-`--overwrite`.)
-
-```shell
-faas-cli template pull --overwrite https://github.com/dspadea/openfaas-rust
-```
-
-The `template pull` command doesn't seem to support pulling with a new name, which is unfortunate.
-You could also pull the template to a different location, move it into your `templates/` directory with
-a different name, and refer to the new name in your `template.yml` file.
 
 
 ## License
