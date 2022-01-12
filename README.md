@@ -19,9 +19,9 @@ This is based on the work in this repo: https://github.com/booyaa/openfaas-rust-
 
 # Roadmap
 
-* I'd like to migrate this to `of-watchdog`. If I can do that without changing the handler API, 
-I'll probably go ahead and change this template. If you don't have an appetite for that sort 
-of thing, feel free to fork this repo. It's probably coming. 
+* I'd like to migrate this to `of-watchdog`, or implementing the equivalent watchdog functionality 
+directly in rust. If I can do that without changing the handler API, I'll probably go ahead 
+and change this template. 
 
 * I think it'd be useful to corral HTTP headers and the like into an event context to pass into
 the function. That might be a breaking api change, though should require only a change to the
