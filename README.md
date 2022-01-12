@@ -5,7 +5,6 @@ Rust function template for OpenFaas, building on the work of Booyaa (see below),
 * Tokio for async handlers
 * JSON handling for arbitrary request/response objects
 * A few build process changes in the Docker file
-* Catch panic unwinds and return a formatted JSON message
 
 # Provenance
 
