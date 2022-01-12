@@ -12,6 +12,11 @@ but I think it could be a lot better. There's a fair chance I'll wind up re-writ
 so if it becomes important to you in any way, make sure you're forking it on Github or checking it into
 your project repo. 
 
+# What's in a name?
+
+`rust-json-classic` refers to the language, the request/response format it expects, and the watchdog type. 
+I believe those are the most likely differentiators between what would be various versions of this template,
+so calling them out in the name to help tell the difference seems the thing to do. 
 
 # Provenance
 
