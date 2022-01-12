@@ -1,3 +1,4 @@
+
 # Summary
 
 Rust function template for OpenFaas, building on the work of Booyaa (see below), and adding:
@@ -5,6 +6,12 @@ Rust function template for OpenFaas, building on the work of Booyaa (see below),
 * Tokio for async handlers
 * JSON handling for arbitrary request/response objects
 * A few build process changes in the Docker file
+
+I think this is a good interim solution to easily get Rust functions with async and serde built in, 
+but I think this could be a lot better. There's a fair chance I'll wind up re-writing this (see roadmap), 
+so if this becomes important to you in any way, make sure you're forking it on Github or checking it into
+your project repo. 
+
 
 # Provenance
 
@@ -19,6 +26,11 @@ of thing, feel free to fork this repo. It's probably coming.
 * I think it'd be useful to corral HTTP headers and the like into an event context to pass into
 the function. That might be a breaking api change, though should require only a change to the
 handler function signature.
+
+* Ultimately, I think a re-think of all this will be in order. I'm not a huge fan of how this builds.
+It leads to weird compile errors when something doesn't match up, it's not very flexible, and it has to 
+compile twice - once for the lib, once for the main bin. I'm also not crazy about the enormous
+docker image size. 
 
 
 # Usage
@@ -41,35 +53,6 @@ The `template pull` command doesn't seem to support pulling with a new name, whi
 You could also pull the template to a different location, move it into your `templates/` directory with
 a different name, and refer to the new name in your `template.yml` file.
 
-
-# Questions
-
-## Why a fork?
-
-First of all, this fundamentally (and incompatibly) changes how the template operates, as well 
-as the intention of the original project. 
-
-The original template was for demonstration purposes for Booyaa's blog, and was relatively simple,
-functionality-wise.  It accepts a string and sends it to the function, which is 
-great when trying to illustrate the data flow. 
-
-For real use, I want something a little more involved. Real use being at odds with the purpose 
-of Booyaa's repo, I figured it best just to go ahead and make my own. If he thinks it makes sense to 
-re-merge the projects, I'm happy to talk about that. 
-
-## Ok, Why Async Handlers?
-
-Functions only execute one at a time, so why are handlers async?
-
-1. Because there's a large part of the Rust ecosystem which is async-first in their API design, and 
-it's very annoying to use when the function is not in an async context. If you don't need async, 
-there's not much of a penalty, but if you do, this makes it much easier. 
-
-2. Because sometimes you want to execute calls in the function concurrently. Spawning tokio tasks
-to collect data from backend REST services, for example, can make your function execute significantly
-faster than running your backend requests serially. 
-
-On the balance, I think this makes it more flexible and less annoying to use. 
 
 ## License
 
